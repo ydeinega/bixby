@@ -1,0 +1,39 @@
+
+structure (Meanings) {
+  description (meanings of a word)
+  property (id) {
+    type (viv.core.Integer)
+    min (Optional)
+    visibility (Private)
+  }
+  property (partOfSpeechCode) {
+    type(viv.core.Text)
+    min (Required)
+    visibility (Private)
+  }
+  property (translation) {
+    type (Translation)
+    min (Required)
+    max (One)
+  }
+  property (previewUrl) {
+    type (viv.core.Text)
+    min (Required)
+    visibility (Private)
+  }
+  property (imageUrl) {
+    type (viv.core.Text)
+    min (Required)
+    visibility (Private)
+  }
+  property (transcription) {
+    type (viv.core.Text)
+    min (Required)
+    visibility (Private)
+  }
+  property (soundUrl) {
+    type (viv.core.Text)
+    min (Required)
+    visibility (Private)
+  }
+}

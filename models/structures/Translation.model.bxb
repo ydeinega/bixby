@@ -1,0 +1,13 @@
+structure (Translation) {
+  description (translation of a word)
+  property (text) {
+    type (Text)
+    min (Optional)
+    max (One)
+  }
+  property (note) {
+    type (viv.core.Text)
+    min (Optional)
+    visibility (Private)
+  }
+}

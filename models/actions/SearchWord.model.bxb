@@ -1,0 +1,12 @@
+action (SearchWord) {
+  description (search for a word in a dictionary)
+  collect {
+    input (word) {
+      type (Text)
+      min (Required)
+      max (One)
+    }
+  }
+  type (Search)
+  output (WordSearchResult)
+}

@@ -1,0 +1,15 @@
+structure (WordSearchResult) {
+  description (word search result)
+  property (id) {
+    type (Id)
+    min (Required)
+  }
+  property (text) {
+    type (Text)
+    min (Required)
+  }
+  property (meanings) {
+    type (Meanings)
+    min (Required)
+  }
+}

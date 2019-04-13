@@ -1,0 +1,15 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (SearchWord) {
+      accepted-inputs (word)
+      local-endpoint (SearchWord.js)
+    }
+
+    action-endpoint (SearchWord) {
+      accepted-inputs (word)
+      remote-endpoint ("{remote.url}/search") {
+        method (GET)
+      }
+    }
+  }
+}
