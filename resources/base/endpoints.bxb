@@ -7,9 +7,15 @@ endpoints {
 
     action-endpoint (SearchWord) {
       accepted-inputs (word)
-      remote-endpoint ("{remote.url}/search") {
+      remote-endpoint ("{remote.url}/words/search") {
         method (GET)
       }
     }
+    
+    action-endpoint (SearchMeaning) {
+      accepted-inputs (word)
+      local-endpoint (SearchMeaning.js)
+    }
   }
+  
 }

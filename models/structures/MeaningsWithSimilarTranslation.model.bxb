@@ -1,0 +1,30 @@
+structure (MeaningsWithSimilarTranslation) {
+  description (meanings with similar translation)
+  
+  property (meaningId) {
+    type (viv.core.Integer)
+    min (Optional)
+    max (One)
+    visibility (Private)
+  }
+  
+  property (frequencyPercent) {
+    type (viv.core.Text)
+    min (Optional)
+    max (One)
+    visibility (Private)
+  }
+  
+  property (partOfSpeechAbbreviation) {
+    type (viv.core.Text)
+    min (Optional)
+    max (One)
+    visibility (Private)
+  }
+  
+  property (translation) {
+    type (Translation)
+    min (Optional)
+    max (One)
+  }
+}

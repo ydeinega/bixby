@@ -1,0 +1,26 @@
+result-view {
+   match {
+     Meanings (this)
+   }
+
+   render {
+      layout {
+       section {
+         content {
+           single-line {
+             text {
+               style (Detail_M)
+               value ("Word: #{value(this[0].text)}")
+             }
+           }
+           single-line {
+             text {
+               style (Detail_M)
+               value ("Id: #{value(this[0].id)}")
+             }
+           }
+         }
+       }
+     } 
+   }
+ }

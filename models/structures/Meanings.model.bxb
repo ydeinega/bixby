@@ -1,6 +1,7 @@
 
 structure (Meanings) {
   description (meanings of a word)
+  // Here is the start of a previous thing
   property (id) {
     type (viv.core.Integer)
     min (Optional)
@@ -8,32 +9,105 @@ structure (Meanings) {
   }
   property (partOfSpeechCode) {
     type(viv.core.Text)
-    min (Required)
+    min (Optional)
     visibility (Private)
   }
   property (translation) {
     type (Translation)
-    min (Required)
+    min (Optional)
     max (One)
   }
   property (previewUrl) {
     type (viv.core.Text)
-    min (Required)
+    min (Optional)
     visibility (Private)
   }
   property (imageUrl) {
     type (viv.core.Text)
-    min (Required)
+    min (Optional)
     visibility (Private)
   }
   property (transcription) {
     type (viv.core.Text)
-    min (Required)
+    min (Optional)
     visibility (Private)
   }
   property (soundUrl) {
     type (viv.core.Text)
-    min (Required)
+    min (Optional)
     visibility (Private)
+  }
+  // Here is the end 
+  
+  property (wordId) {
+    type(viv.core.Integer)
+    min (Optional)
+    visibility (Private)
+  }
+  
+  property (difficultyLevel) {
+    type(viv.core.Integer)
+    min (Optional)
+    visibility (Private)
+  }
+  
+  property (prefix) {
+    type(viv.core.Text)
+    min (Optional)
+    visibility (Private)
+  }
+  
+  property (text) {
+    type(viv.core.Text)
+    min (Optional)
+    visibility (Private)
+  }
+  
+  property (properties) {
+    type(Properties)
+    min (Optional)
+  }
+  
+  property (updatedAt) {
+    type(viv.core.Text)
+    min (Optional)
+    visibility (Private)
+  }
+  
+  property (mnemonics) {
+    type(viv.core.Text)
+    min (Optional)
+    visibility (Private)
+  }
+  
+  property (images) {
+    type(viv.core.Text)
+    min (Optional)
+    max (Many)
+    visibility (Private)
+  }
+  
+  property (definition) {
+    type(Definition)
+    min (Optional)
+    max (One)
+  }
+  
+  property(examples) {
+    type(Example)
+    min(Optional)
+    max(Many)
+  }
+  
+  property(meaningsWithSimilarTranslation) {
+    type(MeaningsWithSimilarTranslation)
+    min(Optional)
+    max(Many)
+  }
+  
+  property (alternativeTraslations) {
+    type(AlternativeTranslation)
+    min(Optional)
+    max(Many)
   }
 }

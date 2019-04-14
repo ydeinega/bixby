@@ -1,0 +1,31 @@
+structure (Properties) {
+  description (properties of a meaning)
+  
+  property (collocation) {
+    type (viv.core.Boolean)
+    min (Optional)
+    max (One)
+    visibility (Private)
+  }
+  
+  property (countability) {
+    type (viv.core.Text)
+    min (Optional)
+    max (One)
+    visibility (Private)
+  }
+  
+  property (plurality) {
+    type (viv.core.Text)
+    min (Optional)
+    max (One)
+    visibility (Private)
+  }
+  
+  property (falseFriends) {
+    type (viv.core.Text)
+    min (Optional)
+    max (Many)
+    visibility (Private)
+  }
+}

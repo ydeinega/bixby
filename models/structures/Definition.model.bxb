@@ -1,0 +1,15 @@
+structure (Definition) {
+  description (definition of a meaning in English with sound)
+  
+  property (text) {
+    type (viv.core.Text)
+    min (Optional)
+    visibility (Private)
+  }
+  
+   property (soundUrl) {
+    type (viv.core.Text)
+    min (Optional)
+    visibility (Private)
+  }
+}
