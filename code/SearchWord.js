@@ -12,5 +12,7 @@ module.exports.function = function searchWord (word) {
   };
   // If word is "apple", then this makes a GET call to /search?search=apple
   var response = http.getUrl(config.get('remote.url') + '/search', options);
+  response[0].meanings[0].imageUrl = "https:" + response[0].meanings[0].imageUrl;
+  console.log(response[0].meanings[0].imageUrl);
   return response;
 }

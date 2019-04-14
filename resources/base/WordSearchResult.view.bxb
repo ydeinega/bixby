@@ -7,16 +7,47 @@ result-view {
       layout {
        section {
          content {
+          image-card {
+          aspect-ratio (4:3)
+            image-url ("#{value(this[0].meanings[0].imageUrl)}")
+          title-area {
+            halign (Start)
+            slot1 {
+              text {
+                value ("")
+                style (Title_M)
+              }
+            }
+          }
+        }
            single-line {
              text {
-               style (Detail_M)
-               value ("Word: #{value(this[0].text)}")
+               style (Detail_L)
+               value ("#{value(this[0].text)}")
+             }
+           }
+          single-line {
+             text {
+               style (Detail_L)
+               value ("#{value(this[0].meanings[0].translation[0].text)}")
              }
            }
            single-line {
              text {
                style (Detail_M)
                value ("Id: #{value(this[0].id)}")
+             }
+           }
+          single-line {
+             text {
+               style (Detail_L)
+              value ("Transcription: | #{value(this[0].meanings[0].transcription)} |")
+             }
+           }
+          single-line {
+             text {
+               style (Detail_L)
+              value ("Example: #{value(this[0].meanings[0].partOfSpeechCode)}")
              }
            }
          }
