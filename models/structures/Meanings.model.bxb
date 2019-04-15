@@ -81,7 +81,7 @@ structure (Meanings) {
   }
   
   property (images) {
-    type(viv.core.Text)
+    type(Images)
     min (Optional)
     max (Many)
     visibility (Private)
