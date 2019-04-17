@@ -39,6 +39,10 @@ function Quiz(title, meanings) {
 exports.function = function(searchTerm) {
   //You can replace with a call to a web api - make sure you map api response to Quiz model
   var quizzesJson = [];
+  var userWords = lib.getWordId();
+  //console.log
+  if (userWords.length > 0)
+    quizzesJson.push(new Quiz("my vocabulary", userWords));
   for(var i = 0; i < quizInfo.length; i++) {
     quizzesJson.push(new Quiz(quizInfo[i].title, quizInfo[i].meaningIds));
   }

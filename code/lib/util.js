@@ -6,6 +6,7 @@ var config = require('config')//my code
 exports.findItems = findItems
 exports.buildQuestionsFromJson = buildQuestionsFromJson
 exports.searchMeaning = searchMeaning
+exports.getWordId = getWordId
 
 function findItems(items, searchTerm) {
    var matches = []
@@ -103,4 +104,22 @@ function searchMeaning (meaningId) {
   return response;
 }
 
+function getWordId() {
+  var db_name = "bixby_jdv";
+  var ContactId = 121212;
+  var myAPIKEY = 'jc13HjwDduIPNOgu1tSxz3BT_CNuDx4H';
+  
+  var options = {
+    format: 'json',
+  };
+  var res =[]
+  
+  var resp = http.getUrl('https://api.mlab.com/api/1/databases/' + db_name + '/collections/' + ContactId + '?apiKey=' + myAPIKEY, options);
+  for (var i = 0; i < resp.length; i++)
+  {
+    res.push(resp[i].id_word)
+  }
+  console.log(res);
+  return res;
+}
 

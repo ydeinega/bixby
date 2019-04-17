@@ -8,14 +8,27 @@ module.exports.function = function searchMeaning (word) {
   if (searchWordResponse.length == 0)
     return [];
   var meaningId = searchWordResponse[0].meanings[0].id;
-  
+  var db_name = "bixby_jdv";
+  var ContactId = 121212;
+  var myAPIKEY = 'jc13HjwDduIPNOgu1tSxz3BT_CNuDx4H';
+
+  var params = {
+    'id_word': meaningId
+  };
   var options = { 
     format: 'json',
-     query: {
+    passAsJson: true,
+  };
+    var postWord = http.postUrl("https://api.mlab.com/api/1/databases/" + db_name + "/collections/" + ContactId + '?apiKey=' + myAPIKEY, params, options);
+  console.log(postWord)
+  
+  // If id is "1111", then this makes a GET call to /meanings?ids=1111
+  options = { 
+    format: 'json',
+    query: {
       ids: meaningId
     }
   };
-  // If id is "1111", then this makes a GET call to /meanings?ids=1111
   var response = http.getUrl(config.get('remote.url') + '/meanings', options);
   return response;
 }
