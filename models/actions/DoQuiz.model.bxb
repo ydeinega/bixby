@@ -1,0 +1,25 @@
+action (DoQuiz) {
+  description (Keep prompting the user for answers until quiz is completed.)
+  type (Commit)
+  collect {
+    input (state) {
+      type (State)
+      min (Required) max (One)
+      default-init {
+        intent {
+          goal: StartQuiz
+        }
+      }
+      validate {
+        if (!state.completed) {
+          replan {
+            intent {
+              goal: UpdateQuiz
+            }
+          }
+        }
+      }
+    }
+  }
+  output (ScoreBook)
+}

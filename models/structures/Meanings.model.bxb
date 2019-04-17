@@ -81,7 +81,7 @@ structure (Meanings) {
   }
   
   property (images) {
-    type(viv.core.Text)
+    type(Images)
     min (Optional)
     max (Many)
     visibility (Private)
@@ -105,7 +105,7 @@ structure (Meanings) {
     max(Many)
   }
   
-  property (alternativeTraslations) {
+  property (alternativeTraslation) {
     type(AlternativeTranslation)
     min(Optional)
     max(Many)

@@ -7,18 +7,83 @@ result-view {
       layout {
        section {
          content {
-           single-line {
+          image-card {
+          aspect-ratio (4:3)
+            image-url ("https:#{value(this.images[0].url)}")
+          title-area {
+            halign (Start)
+            slot1 {
+              text {
+                value ("")
+                style (Title_M)
+              }
+            }
+          }
+        }
+          partitioned{
+            content{
+          single-line {
              text {
-               style (Detail_M)
-               value ("Word: #{value(this[0].text)}")
+               style (Title_L)
+               value ("#{value(this.text)}")
              }
            }
-           single-line {
+          single-line {
              text {
-               style (Detail_M)
-               value ("Id: #{value(this[0].id)}")
+               style (Title_M)
+               value ("#{value(this.translation[0].text)}")
              }
            }
+          }
+          }
+          hbox{
+            content{
+              vbox{
+                content{
+                  single-line {
+             text {
+               style (Detail_L_Soft)
+              value ("Transcription:")
+             }
+           }
+                }
+              }
+              vbox{
+                content{
+                  single-line {
+             text {
+               style (Detail_L)
+              value ("| #{value(this[0].transcription)} |")
+             }
+           }
+                }
+              }
+            }
+          }
+          
+          paragraph ("#{value(this.definition[0].text)}") {
+    style (Detail_L)
+              }
+          single-line {
+                text {
+                    style (Detail_L_Soft)
+                    value ("Examples:") // 4.5stars
+                }
+            }
+          for-each (this.examples){
+            as(y){
+              paragraph ("#{value(y.text)}") {
+    style (Detail_L)
+              }
+            }
+          }
+// form {
+//       elements {
+//         ...
+//       }
+//       on-submit { ... }
+//       submit-button (Add Car)
+//     }
          }
        }
      } 

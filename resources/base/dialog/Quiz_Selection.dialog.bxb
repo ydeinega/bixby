@@ -1,0 +1,4 @@
+dialog (Selection) {
+  match: Quiz
+  template ("Choose the words you want to study")
+}

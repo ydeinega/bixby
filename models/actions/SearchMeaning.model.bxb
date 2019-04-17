@@ -2,7 +2,7 @@ action (SearchMeaning) {
   description (find the most common meaning of the word)
   collect {
     input (word) {
-      type (Text)
+      type (Word)
       min (Required)
       max (One)
     }

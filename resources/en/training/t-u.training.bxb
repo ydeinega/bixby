@@ -1,0 +1,5 @@
+train (t-us7vot1xuz2fg2c5pmvd2o85v) {
+  utterance ("[g:SearchMeaning] how to translate the word (advice)[v:Word]")
+  plan (Y2BmkCvISaxML8ovzUvRS8lMLsnMz0ssqtTzTU3My8xLL2ZQxi4fnJpYlJwBVcUghV1ReH5RCgMTAyMQMwBJRgYQgPIB)
+  last-modified (1555476675148)
+}

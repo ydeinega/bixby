@@ -1,7 +1,7 @@
 structure (Translation) {
   description (translation of a word)
   property (text) {
-    type (Text)
+    type (viv.core.Text)
     min (Optional)
     max (One)
   }
