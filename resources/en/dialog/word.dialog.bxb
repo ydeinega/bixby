@@ -1,0 +1,6 @@
+dialog (Concept) {
+  match{
+    Text
+  }
+  template("Word which was detected.")
+}

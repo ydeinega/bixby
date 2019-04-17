@@ -1,0 +1,10 @@
+train (t-8i2fj4sfetnqonowyuyqm3jvk) {
+  utterance ("[g:SearchMeaning] (advice)[v:Text] find")
+  plan (Y2BmkCvISaxML8ovzUvRS8lMLsnMz0ssqtTzTU3My8xLL2ZQxi4fnJpYlJwBVcUghV1RSGpFCQMTAyMQMwBJRgYQgPIB)
+  last-modified (1555472674068)
+}
+train (t-8vdd3kxy8o7u1gg6hwb2x8hhj) {
+  utterance ("[g:SearchMeaning] find (advice)[v:Text]")
+  plan (Y2BmkCvISaxML8ovzUvRS8lMLsnMz0ssqtTzTU3My8xLL2ZQxi4fnJpYlJwBVcUghV1RSGpFCQMTAyMQMwBJRgYQgPIB)
+  last-modified (1555472144344)
+}
