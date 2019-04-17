@@ -1,0 +1,47 @@
+input-view {
+  match: Answer(this) {
+    to-input: UpdateQuiz(action)
+  }
+  
+  message {
+    if (exists(action.state.lastScore)) {
+      template ("#{macro('score-statement', action.state.lastScore)} #{value(action.state.currentQuestion.textToDisplay)}") {
+        speech ("#{macro('score-statement', action.state.lastScore)}... #{value(action.state.currentQuestion.textToSpeak)}")
+      }
+    } else {
+      template ("#{value(action.state.currentQuestion.textToDisplay)}") {
+        speech ("#{value(action.state.currentQuestion.textToSpeak)}")
+      }
+    }
+  }
+  render {
+    if (size(action.state.currentQuestion.options) > 0) {
+      selection-of (action.state.currentQuestion.options) {
+        where-each (option) {
+          cell-card {
+            slot2 {
+              content {
+                primary {
+                  template ("[#{value(option.alias)}. ]#{value(option.text)}")
+                }
+              }
+            }
+          }
+        }
+      }
+    } else {
+      form {
+        elements {
+          text-input {
+            id (answer)
+            type (Answer)
+          }
+        }
+        on-submit {
+          goal: Answer
+          value: viv.core.FormElement(answer)
+        }
+      }
+    }
+  }
+}

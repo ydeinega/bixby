@@ -1,12 +1,14 @@
 structure (WordSearchResult) {
   description (word search result)
   property (id) {
-    type (Id)
+    type (viv.core.Integer)
     min (Required)
+    visibility (Private)
   }
   property (text) {
-    type (Text)
+    type (viv.core.Text)
     min (Required)
+    visibility (Private)
   }
   property (meanings) {
     type (Meanings)

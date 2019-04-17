@@ -1,0 +1,17 @@
+action (StartQuiz) {
+  description (Starts a quiz and initializes the quiz state)
+  type (BeginTransaction)
+  collect {
+    input (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+      default-init {
+        intent {
+          goal: FindQuiz
+        }
+      }
+    }
+  }
+  
+  output (State)
+}

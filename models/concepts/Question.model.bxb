@@ -1,0 +1,32 @@
+structure (Question) {
+  property (textToDisplay) {
+    description(Question to be displayed)
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (textToSpeak) {
+    description(Question formatted for speech channel)
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (options) {
+    description(Options provided to the user)
+    type (Option)
+    min (Optional) max (Many)
+    visibility (Private)
+  }
+  property (correctAnswer) {
+    description(Information on the correct answer)
+    type (CorrectAnswer)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (index) {
+    description (The index of the question in the quiz)
+    type (viv.core.Integer)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+}

@@ -2,7 +2,7 @@ action (SearchWord) {
   description (search for a word in a dictionary)
   collect {
     input (word) {
-      type (Text)
+      type (Word)
       min (Required)
       max (One)
     }

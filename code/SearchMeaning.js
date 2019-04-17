@@ -7,7 +7,6 @@ module.exports.function = function searchMeaning (word) {
   var searchWordResponse = searchWord(word);
   var meaningId = searchWordResponse[0].meanings[0].id;
   
-  //var meaningId = 188460;
   var options = { 
     format: 'json',
      query: {
