@@ -112,14 +112,14 @@ function getWordId() {
   var options = {
     format: 'json',
   };
-  var res =[]
+  var res = []
   
   var resp = http.getUrl('https://api.mlab.com/api/1/databases/' + db_name + '/collections/' + ContactId + '?apiKey=' + myAPIKEY, options);
   for (var i = 0; i < resp.length; i++)
   {
     res.push(resp[i].id_word)
   }
-  console.log(res);
+  // console.log(res);
   return res;
 }
 

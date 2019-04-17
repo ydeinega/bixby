@@ -1,6 +1,7 @@
 var http = require('http')
 var console = require('console')
 var config = require('config')
+var lib = require("./lib/util");
 
 module.exports.function = function searchMeaning (word) {
   
@@ -19,9 +20,12 @@ module.exports.function = function searchMeaning (word) {
     format: 'json',
     passAsJson: true,
   };
+  var lst = lib.getWordId();
+  if (lst.indexOf(meaningId) < 0) {
     var postWord = http.postUrl("https://api.mlab.com/api/1/databases/" + db_name + "/collections/" + ContactId + '?apiKey=' + myAPIKEY, params, options);
-  console.log(postWord)
-  
+    console.log(postWord)
+  }
+
   // If id is "1111", then this makes a GET call to /meanings?ids=1111
   options = { 
     format: 'json',
