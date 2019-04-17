@@ -1,5 +1,5 @@
-train (t-1xfs6hfg5lek49oy0656o8gd8) {
-  utterance ([g:DoQuiz] Start a quiz)
-  plan (Y2BmEEutSMwtyEnVKyzNrNILTs4vSnXKz89mEEYRd8kPBFIMQqiKSxJLUhmYGBiBmAFIMjIwwGgA)
-  last-modified (1554422126765)
+train (t-1y5p4gqollnjugyu2opulzi0p) {
+  utterance ("[g:SearchMeaning] translate (advice)[v:Word]")
+  plan (Y2BmkCvISaxML8ovzUvRS8lMLsnMz0ssqtTzTU3My8xLL2ZQxi4fnJpYlJwBVcUghV1ReH5RCgMTAyMQMwBJRgYQgPIB)
+  last-modified (1555476677105)
 }

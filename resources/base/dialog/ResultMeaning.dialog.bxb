@@ -1,0 +1,10 @@
+dialog (Result) {
+  match{
+    Meanings(meaningResult){
+      from-output: SearchMeaning(meaningResultOutput)
+    }
+  }
+  // if (meaningResultOutput.word ==='')
+  //   template("Repid please.")
+  template("Word")
+}

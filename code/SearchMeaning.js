@@ -5,6 +5,8 @@ var config = require('config')
 module.exports.function = function searchMeaning (word) {
   
   var searchWordResponse = searchWord(word);
+  if (searchWordResponse.length == 0)
+    return [];
   var meaningId = searchWordResponse[0].meanings[0].id;
   
   var options = { 
@@ -15,7 +17,6 @@ module.exports.function = function searchMeaning (word) {
   };
   // If id is "1111", then this makes a GET call to /meanings?ids=1111
   var response = http.getUrl(config.get('remote.url') + '/meanings', options);
-  //meaningResponse[0].images[0].
   return response;
 }
 

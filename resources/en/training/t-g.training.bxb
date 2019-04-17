@@ -1,0 +1,5 @@
+train (t-groqw8wzmm6pigdwqezkj898c) {
+  utterance ("[g:SearchMeaning] what does the word (advice)[v:Word] mean")
+  plan (Y2BmkCvISaxML8ovzUvRS8lMLsnMz0ssqtTzTU3My8xLL2ZQxi4fnJpYlJwBVcUghV1ReH5RCgMTAyMQMwBJRgYQgPIB)
+  last-modified (1555476673221)
+}
